@@ -15,8 +15,8 @@ public class RegularExpression {
     [^xyz]:反向字符集。匹配未包含的任何字符。例如，"[^abc]"匹配"plain"中"p"，"l"，"i"，"n"。
      */
     public static void main(String[] args) {
-        String content = "A AND b";
-        String pattern = ".*A .*";
+        String content = "Adds ";
+        String pattern = "Ad.*";
 
         boolean isFind = Pattern.matches(pattern,content);
         System.out.println(content + "内有没有对应的"+ pattern+" "+isFind);

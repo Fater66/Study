@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e5046a4-e880-4f7a-87dc-3e4816ecb50e" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="5e5046a4-e880-4f7a-87dc-3e4816ecb50e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solution/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solution/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solution/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solution/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solution/Tool/RegularExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solution/Tool/RegularExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tool/RegularExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tool/RegularExpression.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="Solution" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -18,8 +23,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Q6tWlASP0cYJLA6cf6D908nFyg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -35,34 +48,9 @@
       <command value="test" />
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.Test">
     <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Tool.Deque" />
-      <module name="Solution" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tool.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tool.Main" />
       <module name="Solution" />
       <extension name="coverage">
         <pattern>
@@ -94,6 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegularExpression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tool.RegularExpression" />
+      <module name="Solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="Solution" />
@@ -105,9 +106,9 @@
       <list>
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.RegularExpression" />
         <item itemvalue="Application.NewCoder" />
         <item itemvalue="Application.Deque" />
-        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -123,6 +124,65 @@
       <updated>1567102907336</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="407" height="639" key="DebuggerActiveHint" timestamp="1590341209559">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="407" height="639" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1590341209559" />
+    <state width="407" height="575" key="DebuggerActiveHint/0.23.1440.811@0.23.1440.811" timestamp="1590341073508" />
+    <state width="1440" height="174" key="GridCell.Tab.0.bottom" timestamp="1590348757080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="174" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590348757080" />
+    <state width="1440" height="174" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1590341483124" />
+    <state width="1440" height="174" key="GridCell.Tab.0.center" timestamp="1590348757080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="174" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1590348757080" />
+    <state width="1440" height="174" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1590341483123" />
+    <state width="1440" height="174" key="GridCell.Tab.0.left" timestamp="1590348757079">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="174" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1590348757079" />
+    <state width="1440" height="174" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1590341483122" />
+    <state width="1440" height="174" key="GridCell.Tab.0.right" timestamp="1590348757080">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="174" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1590348757080" />
+    <state width="1440" height="174" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1590341483123" />
+    <state width="1440" height="328" key="GridCell.Tab.1.bottom" timestamp="1590348757071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="328" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590348757071" />
+    <state width="1440" height="162" key="GridCell.Tab.1.bottom/0.23.1440.811@0.23.1440.811" timestamp="1590340651816" />
+    <state width="1440" height="328" key="GridCell.Tab.1.center" timestamp="1590348757071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="328" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1590348757071" />
+    <state width="1440" height="162" key="GridCell.Tab.1.center/0.23.1440.811@0.23.1440.811" timestamp="1590340651815" />
+    <state width="1440" height="328" key="GridCell.Tab.1.left" timestamp="1590348757070">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="328" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1590348757070" />
+    <state width="1440" height="162" key="GridCell.Tab.1.left/0.23.1440.811@0.23.1440.811" timestamp="1590340651815" />
+    <state width="1440" height="328" key="GridCell.Tab.1.right" timestamp="1590348757071">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="328" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1590348757071" />
+    <state width="1440" height="162" key="GridCell.Tab.1.right/0.23.1440.811@0.23.1440.811" timestamp="1590340651815" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -223,19 +283,34 @@
           <option name="timeStamp" value="164" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Test.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="173" />
+          <line>77</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="209" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Test.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="176" />
+          <line>52</line>
+          <option name="timeStamp" value="211" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Test.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="184" />
+          <line>46</line>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Test.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Tool/Deque.java</url>

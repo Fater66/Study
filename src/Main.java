@@ -1,114 +1,80 @@
-import java.util.HashSet;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
-    //用backtrack来做
-    int[][] matrix;
-    HashSet<Integer>[] rowS;
-    HashSet<Integer>[] colS;
-    HashSet<Integer>[] blockS;
-    boolean isSolved;
+    int n;
+    int m;
+    int C;
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Main test = new Main();
-        test.matrix = new int[9][9];
-        test.rowS = new HashSet[9];
-        test.colS = new HashSet[9];
-        test.blockS = new HashSet[9];
-        test.isSolved =false;
-        //输入input
-        for(int i =0;i<9;i++)
+        Scanner sc = new Scanner(System.in);
+        test.n = sc.nextInt();
+        test.m = sc.nextInt();
+        test.C = sc.nextInt();
+        float[][] access = new float[test.n][3];
+        float[][] liquid = new float[test.m][3];
+        for(int i =0;i<test.n;i++)
         {
-            test.rowS[i] = new HashSet<>();
-            test.colS[i] = new HashSet<>();
-            test.blockS[i] = new HashSet<>();
+            access[i][0] = sc.nextFloat();
+            access[i][1] = sc.nextFloat();
+            access[i][2] = sc.nextFloat();
         }
-        for(int i = 0; i < 9; i++){
-            String x = sc.next();
-            int loc = 1;
-            for(int j = 0; j < 9; j++){
-                test.matrix[i][j] = Integer.valueOf(x.charAt(loc)-'0');
-                test.rowS[i].add(test.matrix[i][j]);
-                test.colS[j].add(test.matrix[i][j]);
-                loc +=2;
+        for(int i = 0;i<test.m;i++)
+        {
+            liquid[i][0] = sc.nextFloat();
+            liquid[i][1] = sc.nextFloat();
+            liquid[i][2] = sc.nextFloat();
+        }
+        //贪心算法
+        Arrays.sort(access, new Comparator<float[]>() {
+            @Override
+            public int compare(float[] a1, float[] a2) {
+                float f1 = a1[1]/a1[0];
+                float f2 = a2[1]/a2[0];
+                return (f1 > f2)? -1:1;
             }
-        }
-        //计算
-        outloop:
-        for(int i =0;i<9;i++)
+        });
+        int result = 0;
+        outer:
+        for(int i =0;i<access.length;i++)
         {
-            for(int j = 0;j<9;j++)
+            while(test.C >= access[i][0] && access[i][2] !=0)
             {
-                if (test.matrix[i][j] == 0)
-                {
-                    for(int num = 1;num<=9;num++)
-                    {
-                        int bindex = (i/3)*3+ j/3;
-                        if(!test.rowS[i].contains(num) && !test.colS[j].contains(num)&&!test.blockS[bindex].contains(num))
-                        {
-
-                            test.matrix[i][j] = num;
-                            test.rowS[i].add(num);
-                            test.colS[j].add(num);
-                            test.blockS[bindex].add(num);
-                            test.backtrack(i,j,num);
-                            if(test.isSolved)
-                                break outloop;
-                            test.matrix[i][j] = 0;
-                            test.rowS[i].remove(num);
-                            test.colS[j].remove(num);
-                            test.blockS[bindex].remove(num);
-                        }
+                Arrays.sort(liquid, new Comparator<float[]>() {
+                    @Override
+                    public int compare(float[] l1, float[] l2) {
+                        float v1 = l1[0] * test.C * test.C + l1[1] * test.C + l1[2];
+                        float v2 = l2[0] * test.C * test.C + l2[1] * test.C + l2[2];
+                        return v1>v2?-1:1;
                     }
+                });
+                float v = liquid[0][0] * test.C * test.C + liquid[0][1] * test.C + liquid[0][2];
+                float lv = v/test.C;
+                float av = access[i][1]/access[i][0];
+                if(lv > av) {
+                    result += v;
+                    test.C = 0;
+                    break outer;
                 }
+                result +=access[i][0];
+                access[i][2] --;
+                test.C-=access[i][0];
             }
-        }
-        //输出结果
-        for(int i = 0; i < 9; i++){
-            System.out.print("{");
-            for(int j = 0; j < 9; j++){
-                System.out.print(test.matrix[i][j]);
-                if(j != 8) System.out.print(",");
-            }
-            System.out.print("}");
-            if(i != 8) System.out.println();
         }
 
+        Arrays.sort(liquid, new Comparator<float[]>() {
+            @Override
+            public int compare(float[] l1, float[] l2) {
+                float v1 = l1[0] * test.C * test.C + l1[1] * test.C + l1[2];
+                float v2 = l2[0] * test.C * test.C + l2[1] * test.C + l2[2];
+                return v1>v2?-1:1;
+            }
+        });
+        float v = liquid[0][0] * test.C * test.C + liquid[0][1] * test.C + liquid[0][2];
+        if(v > 0)result += v;
+
+        System.out.println(result);
     }
-
-    private void backtrack(int cr,int cc,int num)
-    {
-        boolean hasZero = false;
-        outloop:
-        //遍历查找矩阵每一个
-        for(int i =0;i<9;i++)
-        {
-            for(int j = 0;j<9;j++)
-            {
-                if (matrix[i][j] == 0)
-                {
-                    int bindex = (i/3)*3+ j/3;
-                    for(int n = 1;n<=9;n++)
-                    {
-                        if(!rowS[i].contains(n) && !colS[j].contains(n)&&!blockS[bindex].contains(n))
-                        {
-                            matrix[i][j] = n;
-                            rowS[i].add(n);
-                            colS[j].add(n);
-                            blockS[bindex].add(num);
-                            backtrack(i,j,n);
-                            if(isSolved) return;
-                            rowS[i].remove(n);
-                            colS[j].remove(n);
-                            blockS[bindex].remove(num);
-                            matrix[i][j] = 0;
-                            hasZero = true;
-                        }
-                    }
-                }
-            }
-        }
-        isSolved = !hasZero;
-    }
-
 }
