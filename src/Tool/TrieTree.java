@@ -1,48 +1,7 @@
-import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+package Tool;
 
-public class Test {
-
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.longestWord(new String[]{"e","ey","eyj","d"}));
-    }
-}
-
-class Solution {
-    String result;
-    TrieTree trieTree;
-    public String longestWord(String[] words) {
-        result = "";
-        trieTree = new TrieTree();
-        for(String word:words)
-        {
-            trieTree.add(word);
-        }
-        TrieNode node = trieTree.getRoot();
-        dfs(node,"");
-        return result;
-    }
-
-    private void dfs(TrieNode node,String s)
-    {
-        if(node != trieTree.getRoot() && node.freqs == 0)
-        {
-            return;
-        }
-        if(node != trieTree.getRoot()) s = s + node.ch;
-        if(node.nodeMap.isEmpty() || node.freqs > 0)
-        {
-            if (s.length() > result.length() || s.length() == result.length() && s.compareTo(result) < 0)
-                result = s;
-            if(node.nodeMap.isEmpty())return;
-        }
-        for(Character child:node.nodeMap.keySet())
-        {
-            dfs(node.nodeMap.get(child),new String(s));
-        }
-    }
-}
+import java.util.HashMap;
+import java.util.Map;
 
 class TrieNode{
     char ch;
@@ -60,18 +19,24 @@ class TrieNode{
  * 描述: 字典树的实现
  *
  */
-class TrieTree {
+public class TrieTree {
+
+    public static void main(String[] args) {
+        TrieTree trieTree = new TrieTree();
+        trieTree.add("dss");
+        System.out.println(trieTree.query("ss"));
+        System.out.println(trieTree.query("d"));
+        System.out.println("appler".compareTo("apply"));
+
+    }
+
 
     private TrieNode root;
 
     public TrieTree(){
-        root = new TrieNode(' ', 0, new HashMap<Character, TrieNode>());
+        root = new TrieNode('\u0000', 0, new HashMap<Character, TrieNode>());
     }
 
-    public TrieNode getRoot()
-    {
-        return root;
-    }
     /**
      * 查询str字符串是否存在，不存在返回0，存在返回该字符串的个数
      * @param str
