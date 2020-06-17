@@ -21,14 +21,14 @@ class TrieNode{
  */
 public class TrieTree {
 
-    public static void main(String[] args) {
-        TrieTree trieTree = new TrieTree();
-        trieTree.add("dss");
-        System.out.println(trieTree.query("ss"));
-        System.out.println(trieTree.query("d"));
-        System.out.println("appler".compareTo("apply"));
-
-    }
+//    public static void main(String[] args) {
+//        TrieTree trieTree = new TrieTree();
+//        trieTree.add("dss");
+//        System.out.println(trieTree.query("ss"));
+//        System.out.println(trieTree.query("d"));
+//        System.out.println("appler".compareTo("apply"));
+//
+//    }
 
 
     private TrieNode root;

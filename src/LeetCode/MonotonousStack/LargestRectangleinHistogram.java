@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class LargestRectangleinHistogram {
     /**
-     * LC89
+     * LC84
      * Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
      * 维护一个单调栈 记得push（-1）
      */
