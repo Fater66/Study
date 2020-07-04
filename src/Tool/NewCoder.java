@@ -33,7 +33,6 @@ public class NewCoder {
     //单纯的读取一行整数，中间用空格分割
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
         String input = sc.nextLine();
         String[] split = input.split(" ");
         int[] spiltInt = new int[split.length];

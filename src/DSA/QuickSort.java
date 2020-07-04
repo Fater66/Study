@@ -23,8 +23,7 @@ public class QuickSort {
             pivot = partition(nums,p,r);
             quicksort(nums,p,pivot);
             quicksort(nums,pivot+1,r);
-        }else
-            return;
+        }
     }
 
     private int partition(int[] nums, int p, int r) {
