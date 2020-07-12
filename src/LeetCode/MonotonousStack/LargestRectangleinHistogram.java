@@ -17,6 +17,7 @@ public class LargestRectangleinHistogram {
         {
             while(stack.peek() != -1 && heights[stack.peek()] >= heights[i])
             {
+                //先pop 再求宽度
                 maxArea = Math.max(maxArea,heights[stack.pop()]*(i-stack.peek()-1));
             }
             stack.push(i);

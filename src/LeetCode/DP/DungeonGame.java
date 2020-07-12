@@ -3,6 +3,10 @@ package LeetCode.DP;
 import java.util.Arrays;
 
 public class DungeonGame {
+    /**
+     * 此题不具有后无效性 因此只能从右下往左上遍历
+     * @param args
+     */
     public  static void main(String[] args)
     {
         DungeonGame test = new DungeonGame();

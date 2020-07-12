@@ -68,7 +68,7 @@ public class CountofSmallerNumbersAfterSelf {
                 p1++;
                 count[indexes[k]] += right-mid;
             }
-            //注意不是temp[p1] 而是nums[temp[p1]]
+            //注意不是temp[p1] 而是nums[temp[p1]]，注意等于也可以
             else if(nums[temp[p1]] <= nums[temp[p2]])
             {
                 indexes[k] = temp[p1];
